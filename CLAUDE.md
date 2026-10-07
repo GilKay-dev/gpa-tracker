@@ -69,6 +69,8 @@ Because tests use Vitest, keep validation, grade conversion, GPA calculation, an
 
 ## Workflow conventions
 
+**Branch per feature:** each feature (F1–F5) is developed on its own branch off `main` (use `/git-branch`). Merge it into `main` (use `/merge`) only after the feature is complete and has no errors (all tests pass).
+
 Custom slash commands in `.claude/commands/` define the git workflow: `/git-branch` (feature/bug-named branches off `main`), `/commit`, `/merge` (merge into `main` with clean-tree check), `/push` (confirm before pushing to `main`), `/pull`, `/learn-by-mistake` (records mistakes in `common_errors.md`), and `/wrap-up`. `/new-project` is only for cloning this template — do not run it here.
 
 `/wrap-up` updates the **Project structure** section below; keep it limited to important level-1/level-2 files and folders.
