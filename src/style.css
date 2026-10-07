@@ -121,6 +121,42 @@ h2 {
   background: var(--primary-hover);
 }
 
+/* Kết quả */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .summary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stat {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.stat dt {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.stat dd {
+  margin: 4px 0 0;
+  font-size: 1.1rem;
+}
+
+.stat-key dd {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
 /* Bảng */
 .table-wrap {
   overflow-x: auto;

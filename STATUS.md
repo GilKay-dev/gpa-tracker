@@ -8,11 +8,11 @@ _Cập nhật lần cuối: 2026-10-07_
 |-----------|------------|
 | 1. Yêu cầu (PRD) | ✅ Hoàn thành |
 | 2. Thiết kế luồng (Mermaid) | ✅ Hoàn thành (Boss duyệt 2026-10-07) |
-| 3. Cài đặt + kiểm thử tự động | ⏳ Đang làm (đã xong: khởi tạo dự án, F1, F2) |
+| 3. Cài đặt + kiểm thử tự động | ⏳ Đang làm (đã xong: khởi tạo dự án, F1, F2, F3) |
 | 4. Kiểm thử người dùng (Boss) | ⬜ Chưa bắt đầu |
 | 5. Deploy Vercel | ⬜ Chưa bắt đầu |
 
-**Việc tiếp theo:** Cài đặt F3 – Tính GPA và xếp loại (nhánh `feature/f3-gpa`).
+**Việc tiếp theo:** Cài đặt F4 – Sửa / xoá môn học (nhánh `feature/f4-edit-delete`).
 
 **URL công khai:** _(chưa có)_
 
@@ -25,6 +25,8 @@ _Cập nhật lần cuối: 2026-10-07_
 | 2026-10-07 | Vite + HTML/CSS/JS thuần, test bằng Vitest, deploy Vercel | Theo yêu cầu PRD |
 | 2026-10-07 | Tách phần tính toán (kiểm tra dữ liệu, quy đổi, tính GPA, đọc dữ liệu lưu) khỏi phần giao diện | Để viết unit test trực tiếp, dễ kiểm soát lỗi |
 | 2026-10-07 | Mỗi chức năng làm trên một nhánh riêng, xong và hết lỗi mới gộp vào `main` | Theo yêu cầu của Boss, giữ `main` luôn chạy được |
+| 2026-10-07 | Xếp loại (F3) dựa trên GPA hệ 4 **đã làm tròn** 2 chữ số (VD 3,595 → 3,60 → Xuất sắc) | Khớp với con số người dùng nhìn thấy, đúng thứ tự trong flowchart F3 |
+| 2026-10-07 | Khi tính GPA, cộng điểm theo đơn vị 0,1 (số nguyên) rồi mới chia | Tránh sai số máy tính làm lệch kết quả làm tròn |
 | 2026-10-07 | Ô Tín chỉ và Điểm dùng ô nhập chữ (không dùng ô số của trình duyệt) | Ô số của một số trình duyệt không nhận dấu phẩy `8,5` |
 | 2026-10-07 | Làm tròn điểm theo cách tính trên chuỗi số | Tránh sai số máy tính (VD: 8,45 phải ra 8,5 chứ không ra 8,4) |
 | 2026-10-07 | Khi nhập sai, con trỏ nhảy về ô sai đầu tiên | Giúp người dùng sửa nhanh |
