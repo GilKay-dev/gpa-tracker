@@ -45,7 +45,7 @@ flowchart LR
 - [x] F3 – Tính GPA, xếp loại + test.
 - [x] F4 – Sửa / xoá môn học + test.
 - [x] F5 – Lưu localStorage, xử lý dữ liệu hỏng + test.
-- [ ] Giao diện responsive (≥ 360px), toàn bộ tiếng Việt.
+- [x] Giao diện responsive (≥ 360px), toàn bộ tiếng Việt.
 - [x] Cập nhật bảng trạng thái mục 4 trong `PRD.md`.
 
 **Điều kiện hoàn thành:** Đủ F1–F5, toàn bộ test đạt, `npm run build` thành công.

@@ -97,18 +97,20 @@ function renderTable() {
       const row = document.createElement('tr');
       row.classList.toggle('editing', course.id === editingId);
       const { letter, point4 } = convertScore(course.score);
+      // Nhãn cột dùng cho giao diện điện thoại (mỗi dòng hiển thị như một thẻ).
       const cells = [
-        [String(index + 1), ''],
-        [course.name, 'name'],
-        [String(course.credits), 'num'],
-        [formatScore(course.score), 'num'],
-        [letter, 'num'],
-        [formatScore(point4), 'num'],
+        [String(index + 1), 'index', '#'],
+        [course.name, 'name', 'Tên môn'],
+        [String(course.credits), 'num', 'Tín chỉ'],
+        [formatScore(course.score), 'num', 'Điểm hệ 10'],
+        [letter, 'num', 'Điểm chữ'],
+        [formatScore(point4), 'num', 'Hệ 4'],
       ];
-      for (const [text, className] of cells) {
+      for (const [text, className, label] of cells) {
         const cell = document.createElement('td');
         cell.textContent = text;
-        if (className) cell.className = className;
+        cell.className = className;
+        cell.dataset.label = label;
         row.append(cell);
       }
       const actionCell = document.createElement('td');
