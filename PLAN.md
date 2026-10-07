@@ -24,13 +24,13 @@ flowchart LR
 ## Giai đoạn 2 – Thiết kế luồng nghiệp vụ
 **Đầu ra:** `docs/FLOWS.md` (flowchart cú pháp Mermaid)
 
-- [ ] Luồng tổng thể của ứng dụng (mở trang → tải dữ liệu → thao tác → lưu).
-- [ ] F1 – Thêm môn học (nhập → kiểm tra hợp lệ → báo lỗi / thêm vào bảng).
-- [ ] F2 – Quy đổi điểm (điểm hệ 10 → điểm chữ → hệ 4).
-- [ ] F3 – Tính GPA và xếp loại (kể cả trường hợp chưa có môn).
-- [ ] F4 – Sửa / xoá môn học (có bước xác nhận khi xoá).
-- [ ] F5 – Lưu / tải dữ liệu (kể cả dữ liệu hỏng) và "Xoá tất cả".
-- [ ] Boss duyệt các flowchart.
+- [x] Luồng tổng thể của ứng dụng (mở trang → tải dữ liệu → thao tác → lưu).
+- [x] F1 – Thêm môn học (nhập → kiểm tra hợp lệ → báo lỗi / thêm vào bảng).
+- [x] F2 – Quy đổi điểm (điểm hệ 10 → điểm chữ → hệ 4).
+- [x] F3 – Tính GPA và xếp loại (kể cả trường hợp chưa có môn).
+- [x] F4 – Sửa / xoá môn học (có bước xác nhận khi xoá).
+- [x] F5 – Lưu / tải dữ liệu (kể cả dữ liệu hỏng) và "Xoá tất cả".
+- [x] Boss duyệt các flowchart.
 
 **Điều kiện hoàn thành:** Đủ flowchart cho F1–F5, Boss duyệt.
 

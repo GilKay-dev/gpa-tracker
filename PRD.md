@@ -52,6 +52,7 @@ tích lũy (GPA) hệ 4 và hệ 10, cùng xếp loại học lực. Không cầ
 ### F5. Lưu dữ liệu
 - Mọi thay đổi lưu vào localStorage (key: "gpa-tracker:v1"), tải lại trang không mất dữ liệu.
 - Dữ liệu hỏng/không đọc được: bỏ qua, khởi tạo danh sách rỗng, không làm trắng trang.
+  Nếu chỉ hỏng một phần (đọc được danh sách nhưng có môn sai dữ liệu): giữ các môn hợp lệ, bỏ qua môn sai.
 - Nút "Xoá tất cả" (có xác nhận).
 
 ## 3. Yêu cầu phi chức năng

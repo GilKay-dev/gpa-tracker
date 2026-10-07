@@ -7,12 +7,12 @@ _Cập nhật lần cuối: 2026-10-07_
 | Giai đoạn | Trạng thái |
 |-----------|------------|
 | 1. Yêu cầu (PRD) | ✅ Hoàn thành |
-| 2. Thiết kế luồng (Mermaid) | ⏳ Sắp bắt đầu |
-| 3. Cài đặt + kiểm thử tự động | ⬜ Chưa bắt đầu |
+| 2. Thiết kế luồng (Mermaid) | ✅ Hoàn thành (Boss duyệt 2026-10-07) |
+| 3. Cài đặt + kiểm thử tự động | ⏳ Sắp bắt đầu |
 | 4. Kiểm thử người dùng (Boss) | ⬜ Chưa bắt đầu |
 | 5. Deploy Vercel | ⬜ Chưa bắt đầu |
 
-**Việc tiếp theo:** Vẽ flowchart nghiệp vụ cho F1–F5 trong `docs/FLOWS.md`.
+**Việc tiếp theo:** Khởi tạo dự án Vite + Vitest, bắt đầu cài đặt F1.
 
 **URL công khai:** _(chưa có)_
 
@@ -29,4 +29,5 @@ _Cập nhật lần cuối: 2026-10-07_
 
 | Ngày | Thay đổi | Lý do | Tài liệu bị ảnh hưởng |
 |------|----------|-------|------------------------|
-| _(chưa có)_ | | | |
+| 2026-10-07 | Dữ liệu lưu hỏng một phần: giữ các môn hợp lệ, bỏ môn sai (PRD cũ: khởi tạo danh sách rỗng) | Tránh mất toàn bộ dữ liệu vì một dòng lỗi | `PRD.md` F5, `docs/FLOWS.md` F5a |
+| 2026-10-07 | Bổ sung 5 chi tiết PRD chưa nêu: nút "Huỷ" khi sửa, xoá môn đang sửa thì xoá trắng form, báo lỗi khi không lưu được, khoá "Xoá tất cả" khi danh sách trống, hiện lỗi cả 3 ô cùng lúc | Làm rõ hành vi, Boss đã duyệt | `docs/FLOWS.md` (mục Giả định) |
