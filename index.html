@@ -12,7 +12,7 @@
         <p class="subtitle">Tính điểm trung bình tích lũy hệ 4 và hệ 10</p>
       </header>
       <section class="card">
-        <h2>Thêm môn học</h2>
+        <h2 id="form-title">Thêm môn học</h2>
         <form id="course-form" novalidate>
           <div class="field field-name">
             <label for="course-name">Tên môn</label>
@@ -34,6 +34,7 @@
           </div>
           <div class="actions">
             <button type="submit" id="submit-btn" class="btn btn-primary">Thêm môn</button>
+            <button type="button" id="cancel-btn" class="btn btn-secondary" hidden>Huỷ</button>
           </div>
         </form>
       </section>
@@ -62,6 +63,7 @@
                 <th class="num">Điểm hệ 10</th>
                 <th class="num">Điểm chữ</th>
                 <th class="num">Hệ 4</th>
+                <th class="row-actions"><span class="visually-hidden">Thao tác</span></th>
               </tr>
             </thead>
             <tbody id="course-body"></tbody>

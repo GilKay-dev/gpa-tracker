@@ -43,7 +43,7 @@ flowchart LR
 - [x] F1 – Thêm môn học + test kiểm tra dữ liệu.
 - [x] F2 – Quy đổi điểm + test các ngưỡng điểm (8.4 / 8.5, 3.9 / 4.0…).
 - [x] F3 – Tính GPA, xếp loại + test.
-- [ ] F4 – Sửa / xoá môn học + test.
+- [x] F4 – Sửa / xoá môn học + test.
 - [ ] F5 – Lưu localStorage, xử lý dữ liệu hỏng + test.
 - [ ] Giao diện responsive (≥ 360px), toàn bộ tiếng Việt.
 - [ ] Cập nhật bảng trạng thái mục 4 trong `PRD.md`.
