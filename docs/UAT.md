@@ -101,4 +101,4 @@ Thêm đúng 3 môn sau vào danh sách trống:
 
 ## Kết luận
 
-- [ ] Boss xác nhận đạt, cho phép chuyển sang giai đoạn 5 (Deploy Vercel).
+- [x] Boss xác nhận đạt, cho phép chuyển sang giai đoạn 5 (Deploy Vercel). _(2026-10-07: tất cả mục đều đạt, không phát hiện lỗi)_

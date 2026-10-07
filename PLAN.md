@@ -56,9 +56,9 @@ flowchart LR
 **Đầu ra:** Checklist kiểm thử + danh sách lỗi đã sửa
 
 - [x] Claude chuẩn bị checklist kiểm thử theo từng chức năng (`docs/UAT.md`).
-- [ ] Boss chạy thử trên máy tính và điện thoại.
-- [ ] Sửa các lỗi Boss báo, chạy lại test tự động.
-- [ ] Boss xác nhận đạt.
+- [x] Boss chạy thử trên máy tính và điện thoại.
+- [x] Sửa các lỗi Boss báo, chạy lại test tự động. _(không có lỗi)_
+- [x] Boss xác nhận đạt.
 
 **Điều kiện hoàn thành:** Boss duyệt nghiệm thu.
 
