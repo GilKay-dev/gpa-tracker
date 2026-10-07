@@ -1,4 +1,5 @@
 import './style.css';
+import { calculateSummary } from './gpa.js';
 import { convertScore } from './grade.js';
 import { validateCourse } from './validation.js';
 
@@ -17,12 +18,24 @@ const errorEls = {
   credits: document.querySelector('#error-credits'),
   score: document.querySelector('#error-score'),
 };
+const summaryEls = {
+  count: document.querySelector('#sum-count'),
+  credits: document.querySelector('#sum-credits'),
+  passed: document.querySelector('#sum-passed'),
+  gpa4: document.querySelector('#sum-gpa4'),
+  gpa10: document.querySelector('#sum-gpa10'),
+  classification: document.querySelector('#sum-class'),
+};
 
 let courses = [];
 let nextId = 1;
 
 function formatScore(score) {
   return score.toFixed(1).replace('.', ',');
+}
+
+function formatGpa(gpa) {
+  return gpa === null ? '—' : gpa.toFixed(2).replace('.', ',');
 }
 
 function showErrors(errors = {}) {
@@ -59,6 +72,21 @@ function renderTable() {
   emptyHint.hidden = courses.length > 0;
 }
 
+function renderSummary() {
+  const summary = calculateSummary(courses);
+  summaryEls.count.textContent = String(summary.courseCount);
+  summaryEls.credits.textContent = String(summary.totalCredits);
+  summaryEls.passed.textContent = String(summary.passedCredits);
+  summaryEls.gpa4.textContent = formatGpa(summary.gpa4);
+  summaryEls.gpa10.textContent = formatGpa(summary.gpa10);
+  summaryEls.classification.textContent = summary.classification ?? '—';
+}
+
+function render() {
+  renderTable();
+  renderSummary();
+}
+
 function resetForm() {
   form.reset();
   showErrors();
@@ -81,8 +109,8 @@ form.addEventListener('submit', (event) => {
   }
 
   courses = [...courses, { id: nextId++, ...result.course }];
-  renderTable();
+  render();
   resetForm();
 });
 
-renderTable();
+render();
