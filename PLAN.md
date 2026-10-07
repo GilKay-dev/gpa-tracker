@@ -41,7 +41,7 @@ flowchart LR
 
 - [x] Khởi tạo dự án Vite + Vitest, cập nhật mục Commands trong `CLAUDE.md`.
 - [x] F1 – Thêm môn học + test kiểm tra dữ liệu.
-- [ ] F2 – Quy đổi điểm + test các ngưỡng điểm (8.4 / 8.5, 3.9 / 4.0…).
+- [x] F2 – Quy đổi điểm + test các ngưỡng điểm (8.4 / 8.5, 3.9 / 4.0…).
 - [ ] F3 – Tính GPA, xếp loại + test.
 - [ ] F4 – Sửa / xoá môn học + test.
 - [ ] F5 – Lưu localStorage, xử lý dữ liệu hỏng + test.
