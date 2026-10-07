@@ -8,11 +8,11 @@ _Cập nhật lần cuối: 2026-10-07_
 |-----------|------------|
 | 1. Yêu cầu (PRD) | ✅ Hoàn thành |
 | 2. Thiết kế luồng (Mermaid) | ✅ Hoàn thành (Boss duyệt 2026-10-07) |
-| 3. Cài đặt + kiểm thử tự động | ⏳ Đang làm (đã xong: khởi tạo dự án, F1–F5; còn rà soát giao diện responsive ≥ 360px) |
+| 3. Cài đặt + kiểm thử tự động | ✅ Hoàn thành (F1–F5, 119 test đạt, build thành công, giao diện đã kiểm tra ở 360px) |
 | 4. Kiểm thử người dùng (Boss) | ⬜ Chưa bắt đầu |
 | 5. Deploy Vercel | ⬜ Chưa bắt đầu |
 
-**Việc tiếp theo:** Rà soát giao diện trên màn hình 360px, sau đó chuyển sang giai đoạn 4 (Boss kiểm thử).
+**Việc tiếp theo:** Giai đoạn 4 — tôi chuẩn bị checklist kiểm thử, Boss chạy thử trên máy tính và điện thoại.
 
 **URL công khai:** _(chưa có)_
 
@@ -37,6 +37,7 @@ _Cập nhật lần cuối: 2026-10-07_
 | 2026-10-07 | F5: phần đọc/ghi dữ liệu viết riêng (`src/storage.js`); môn đọc lên được kiểm tra lại bằng đúng luật của F1 | Kiểm thử được; dữ liệu bị sửa tay cũng không làm sai GPA |
 | 2026-10-07 | F5: bỏ môn trùng mã (id) khi tải, môn mới luôn nhận mã lớn hơn mã cao nhất | Sửa/xoá luôn đúng môn sau khi tải lại trang |
 | 2026-10-07 | F5: nút "Xoá tất cả" đặt cạnh tiêu đề "Danh sách môn học"; thông báo "Không lưu được dữ liệu" hiện ở đầu trang, tự ẩn khi lưu lại được | Dễ thấy, không che nội dung |
+| 2026-10-07 | Màn hình hẹp (< 640px): mỗi môn hiển thị thành một thẻ (tên môn ở trên, 4 ô điểm bên dưới, nút Sửa/Xoá to hơn), ẩn cột số thứ tự | Bảng 7 cột không vừa màn 360px, phải cuộn ngang và khó bấm nút |
 
 ## 3. Thay đổi so với ban đầu
 

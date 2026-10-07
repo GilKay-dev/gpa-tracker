@@ -271,6 +271,71 @@ tr.editing td {
   background: #eef4ff;
 }
 
+/* Điện thoại: mỗi môn hiển thị như một thẻ, không cần cuộn ngang */
+@media (max-width: 639px) {
+  #course-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  #course-table tr {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px 8px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  #course-table tr.editing {
+    background: #eef4ff;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  #course-table td {
+    padding: 0;
+    border: none;
+    text-align: left;
+    background: none;
+  }
+
+  #course-table td.index {
+    display: none;
+  }
+
+  #course-table td.name {
+    grid-column: 1 / -1;
+    font-weight: 600;
+  }
+
+  #course-table td.num::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.75rem;
+    color: var(--muted);
+    white-space: normal;
+  }
+
+  #course-table td.row-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+  }
+
+  #course-table .row-actions .btn {
+    flex: 1;
+    padding: 8px 10px;
+  }
+
+  #course-table .row-actions .btn + .btn {
+    margin-left: 0;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
