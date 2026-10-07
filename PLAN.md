@@ -40,7 +40,7 @@ flowchart LR
 **Đầu ra:** Mã nguồn + unit test (Vitest) chạy xanh
 
 - [x] Khởi tạo dự án Vite + Vitest, cập nhật mục Commands trong `CLAUDE.md`.
-- [ ] F1 – Thêm môn học + test kiểm tra dữ liệu.
+- [x] F1 – Thêm môn học + test kiểm tra dữ liệu.
 - [ ] F2 – Quy đổi điểm + test các ngưỡng điểm (8.4 / 8.5, 3.9 / 4.0…).
 - [ ] F3 – Tính GPA, xếp loại + test.
 - [ ] F4 – Sửa / xoá môn học + test.
