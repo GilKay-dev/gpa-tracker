@@ -39,7 +39,7 @@ flowchart LR
 ## Giai đoạn 3 – Cài đặt và kiểm thử tự động
 **Đầu ra:** Mã nguồn + unit test (Vitest) chạy xanh
 
-- [ ] Khởi tạo dự án Vite + Vitest, cập nhật mục Commands trong `CLAUDE.md`.
+- [x] Khởi tạo dự án Vite + Vitest, cập nhật mục Commands trong `CLAUDE.md`.
 - [ ] F1 – Thêm môn học + test kiểm tra dữ liệu.
 - [ ] F2 – Quy đổi điểm + test các ngưỡng điểm (8.4 / 8.5, 3.9 / 4.0…).
 - [ ] F3 – Tính GPA, xếp loại + test.

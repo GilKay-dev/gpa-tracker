@@ -10,7 +10,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project status
 
-Pre-implementation: the repo currently holds only `PRD.md`, `PLAN.md`, `STATUS.md`, `.gitignore`, and custom slash commands in `.claude/commands/`. There is no `package.json` or source code yet. **`PRD.md` is the source of truth** for requirements (written in Vietnamese) — read it before implementing any feature, and update its feature status table (section 4) when a feature (F1–F5) is completed.
+Phase 3 (implementation) in progress: the Vite + Vitest project is scaffolded; features are added one branch at a time. **`PRD.md` is the source of truth** for requirements (written in Vietnamese) — read it before implementing any feature, and update its feature status table (section 4) when a feature (F1–F5) is completed.
 
 ## Development process (Waterfall)
 
@@ -38,19 +38,17 @@ A client-only GPA calculator web app for Vietnamese credit-based university stud
 
 ## Commands
 
-Once the Vite project is scaffolded, the expected commands are:
-
 ```bash
 npm install
 npm run dev            # Vite dev server
 npm run build          # production build to dist/
-npx vitest             # run tests in watch mode
-npx vitest run         # run tests once
-npx vitest run path/to/file.test.js   # single test file
-npx vitest run -t "test name"         # single test by name
+npm test               # run tests once (vitest run)
+npm run test:watch     # run tests in watch mode
+npx vitest run tests/validation.test.js   # single test file
+npx vitest run -t "test name"             # single test by name
 ```
 
-Update this section if the actual `package.json` scripts differ.
+Tests live in `tests/**/*.test.js` (configured in `vite.config.js`).
 
 ## Domain rules that are easy to get wrong
 
