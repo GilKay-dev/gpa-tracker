@@ -1,4 +1,5 @@
 import './style.css';
+import { convertScore } from './grade.js';
 import { validateCourse } from './validation.js';
 
 const FIELDS = ['name', 'credits', 'score'];
@@ -37,11 +38,14 @@ function renderTable() {
   tbody.replaceChildren(
     ...courses.map((course, index) => {
       const row = document.createElement('tr');
+      const { letter, point4 } = convertScore(course.score);
       const cells = [
         [String(index + 1), ''],
         [course.name, 'name'],
         [String(course.credits), 'num'],
         [formatScore(course.score), 'num'],
+        [letter, 'num'],
+        [formatScore(point4), 'num'],
       ];
       for (const [text, className] of cells) {
         const cell = document.createElement('td');

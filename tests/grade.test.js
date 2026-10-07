@@ -1,0 +1,39 @@
+import { describe, expect, it } from 'vitest';
+import { convertScore } from '../src/grade.js';
+import { validateScore } from '../src/validation.js';
+
+describe('convertScore', () => {
+  it.each([
+    [10, 'A', 4.0],
+    [8.5, 'A', 4.0],
+    [8.4, 'B+', 3.5],
+    [8.0, 'B+', 3.5],
+    [7.9, 'B', 3.0],
+    [7.0, 'B', 3.0],
+    [6.9, 'C+', 2.5],
+    [6.5, 'C+', 2.5],
+    [6.4, 'C', 2.0],
+    [5.5, 'C', 2.0],
+    [5.4, 'D+', 1.5],
+    [5.0, 'D+', 1.5],
+    [4.9, 'D', 1.0],
+    [4.0, 'D', 1.0],
+    [3.9, 'F', 0.0],
+    [0, 'F', 0.0],
+  ])('%s → %s (%s)', (score, letter, point4) => {
+    expect(convertScore(score)).toEqual({ letter, point4 });
+  });
+});
+
+describe('làm tròn trước rồi mới quy đổi', () => {
+  it.each([
+    ['8,45', 'A'],
+    ['8.44', 'B+'],
+    ['3,95', 'D'],
+    ['3.94', 'F'],
+    ['6,45', 'C+'],
+  ])('%s → %s', (input, letter) => {
+    const { value } = validateScore(input);
+    expect(convertScore(value).letter).toBe(letter);
+  });
+});
