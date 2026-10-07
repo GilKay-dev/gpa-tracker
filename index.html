@@ -11,6 +11,9 @@
         <h1>GPA Tracker</h1>
         <p class="subtitle">Tính điểm trung bình tích lũy hệ 4 và hệ 10</p>
       </header>
+      <p id="save-warning" class="notice" role="alert" hidden>
+        Không lưu được dữ liệu. Thay đổi sẽ mất khi tải lại trang.
+      </p>
       <section class="card">
         <h2 id="form-title">Thêm môn học</h2>
         <form id="course-form" novalidate>
@@ -52,7 +55,10 @@
       </section>
 
       <section class="card">
-        <h2>Danh sách môn học</h2>
+        <div class="card-head">
+          <h2>Danh sách môn học</h2>
+          <button type="button" id="clear-all-btn" class="btn btn-small btn-danger">Xoá tất cả</button>
+        </div>
         <div class="table-wrap">
           <table id="course-table">
             <thead>

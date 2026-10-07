@@ -8,10 +8,12 @@ import {
 } from './courses.js';
 import { calculateSummary } from './gpa.js';
 import { convertScore } from './grade.js';
+import { loadCourses, nextIdAfter, saveCourses } from './storage.js';
 import { validateCourse } from './validation.js';
 
 const FIELDS = ['name', 'credits', 'score'];
 const CONFIRM_DELETE = 'Bạn có chắc muốn xoá môn này?';
+const CONFIRM_CLEAR_ALL = 'Xoá toàn bộ môn học? Không thể hoàn tác.';
 
 const form = document.querySelector('#course-form');
 const formTitle = document.querySelector('#form-title');
@@ -19,6 +21,8 @@ const submitBtn = document.querySelector('#submit-btn');
 const cancelBtn = document.querySelector('#cancel-btn');
 const tbody = document.querySelector('#course-body');
 const emptyHint = document.querySelector('#empty-hint');
+const clearAllBtn = document.querySelector('#clear-all-btn');
+const saveWarning = document.querySelector('#save-warning');
 const inputs = {
   name: document.querySelector('#course-name'),
   credits: document.querySelector('#course-credits'),
@@ -38,10 +42,26 @@ const summaryEls = {
   classification: document.querySelector('#sum-class'),
 };
 
-let courses = [];
-let nextId = 1;
+/** localStorage có thể bị trình duyệt chặn (chế độ riêng tư, tắt cookie…). */
+function getStorage() {
+  try {
+    return window.localStorage;
+  } catch {
+    return null;
+  }
+}
+
+const storage = getStorage();
+let courses = storage ? loadCourses(storage) : [];
+let nextId = nextIdAfter(courses);
 /** id của môn đang sửa trên form; null = chế độ "Thêm môn". */
 let editingId = null;
+
+/** Ghi danh sách hiện tại; không ghi được thì hiện thông báo, ứng dụng vẫn chạy. */
+function persist() {
+  const saved = storage !== null && saveCourses(storage, courses);
+  saveWarning.hidden = saved;
+}
 
 function formatScore(score) {
   return score.toFixed(1).replace('.', ',');
@@ -102,6 +122,7 @@ function renderTable() {
     }),
   );
   emptyHint.hidden = courses.length > 0;
+  clearAllBtn.disabled = courses.length === 0;
 }
 
 function renderSummary() {
@@ -151,6 +172,15 @@ function deleteCourse(id) {
   courses = removeCourse(courses, id);
   if (id === editingId) resetForm();
   render();
+  persist();
+}
+
+function clearAll() {
+  if (courses.length === 0 || !window.confirm(CONFIRM_CLEAR_ALL)) return;
+  courses = [];
+  resetForm();
+  render();
+  persist();
 }
 
 form.addEventListener('submit', (event) => {
@@ -174,7 +204,10 @@ form.addEventListener('submit', (event) => {
       : updateCourse(courses, editingId, result.course);
   resetForm();
   render();
+  persist();
 });
+
+clearAllBtn.addEventListener('click', clearAll);
 
 cancelBtn.addEventListener('click', () => {
   resetForm();
