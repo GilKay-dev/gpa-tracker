@@ -44,9 +44,9 @@ flowchart LR
 - [x] F2 – Quy đổi điểm + test các ngưỡng điểm (8.4 / 8.5, 3.9 / 4.0…).
 - [x] F3 – Tính GPA, xếp loại + test.
 - [x] F4 – Sửa / xoá môn học + test.
-- [ ] F5 – Lưu localStorage, xử lý dữ liệu hỏng + test.
+- [x] F5 – Lưu localStorage, xử lý dữ liệu hỏng + test.
 - [ ] Giao diện responsive (≥ 360px), toàn bộ tiếng Việt.
-- [ ] Cập nhật bảng trạng thái mục 4 trong `PRD.md`.
+- [x] Cập nhật bảng trạng thái mục 4 trong `PRD.md`.
 
 **Điều kiện hoàn thành:** Đủ F1–F5, toàn bộ test đạt, `npm run build` thành công.
 

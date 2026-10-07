@@ -8,11 +8,11 @@ _Cập nhật lần cuối: 2026-10-07_
 |-----------|------------|
 | 1. Yêu cầu (PRD) | ✅ Hoàn thành |
 | 2. Thiết kế luồng (Mermaid) | ✅ Hoàn thành (Boss duyệt 2026-10-07) |
-| 3. Cài đặt + kiểm thử tự động | ⏳ Đang làm (đã xong: khởi tạo dự án, F1, F2, F3, F4) |
+| 3. Cài đặt + kiểm thử tự động | ⏳ Đang làm (đã xong: khởi tạo dự án, F1–F5; còn rà soát giao diện responsive ≥ 360px) |
 | 4. Kiểm thử người dùng (Boss) | ⬜ Chưa bắt đầu |
 | 5. Deploy Vercel | ⬜ Chưa bắt đầu |
 
-**Việc tiếp theo:** Cài đặt F5 – Lưu dữ liệu localStorage + "Xoá tất cả" (nhánh `feature/f5-storage`).
+**Việc tiếp theo:** Rà soát giao diện trên màn hình 360px, sau đó chuyển sang giai đoạn 4 (Boss kiểm thử).
 
 **URL công khai:** _(chưa có)_
 
@@ -34,6 +34,9 @@ _Cập nhật lần cuối: 2026-10-07_
 | 2026-10-07 | F4: thêm/sửa/xoá trong danh sách viết thành hàm riêng (`src/courses.js`), mỗi môn có mã riêng (id) | Kiểm thử được, sửa/xoá đúng môn kể cả khi trùng tên |
 | 2026-10-07 | F4: khi sửa, tiêu đề form đổi thành "Sửa môn học", dòng đang sửa được tô màu; phím Esc = Huỷ | Người dùng biết rõ mình đang sửa môn nào |
 | 2026-10-07 | F4: hỏi xác nhận xoá bằng hộp thoại có sẵn của trình duyệt | Đơn giản, chạy được trên mọi máy và điện thoại |
+| 2026-10-07 | F5: phần đọc/ghi dữ liệu viết riêng (`src/storage.js`); môn đọc lên được kiểm tra lại bằng đúng luật của F1 | Kiểm thử được; dữ liệu bị sửa tay cũng không làm sai GPA |
+| 2026-10-07 | F5: bỏ môn trùng mã (id) khi tải, môn mới luôn nhận mã lớn hơn mã cao nhất | Sửa/xoá luôn đúng môn sau khi tải lại trang |
+| 2026-10-07 | F5: nút "Xoá tất cả" đặt cạnh tiêu đề "Danh sách môn học"; thông báo "Không lưu được dữ liệu" hiện ở đầu trang, tự ẩn khi lưu lại được | Dễ thấy, không che nội dung |
 
 ## 3. Thay đổi so với ban đầu
 

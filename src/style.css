@@ -50,6 +50,27 @@ h2 {
   margin-bottom: 16px;
 }
 
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.card-head h2 {
+  margin: 0;
+}
+
+.notice {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border: 1px solid var(--danger);
+  border-radius: 8px;
+  background: #fdecea;
+  color: var(--danger);
+}
+
 /* Form */
 #course-form {
   display: grid;
@@ -139,6 +160,15 @@ h2 {
 
 .btn-danger:hover {
   background: #fdecea;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-danger:disabled:hover {
+  background: #fff;
 }
 
 .btn-small {
