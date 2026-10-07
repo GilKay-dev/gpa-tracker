@@ -55,7 +55,7 @@ flowchart LR
 ## Giai đoạn 4 – Kiểm thử người dùng (Boss thực hiện)
 **Đầu ra:** Checklist kiểm thử + danh sách lỗi đã sửa
 
-- [ ] Claude chuẩn bị checklist kiểm thử theo từng chức năng.
+- [x] Claude chuẩn bị checklist kiểm thử theo từng chức năng (`docs/UAT.md`).
 - [ ] Boss chạy thử trên máy tính và điện thoại.
 - [ ] Sửa các lỗi Boss báo, chạy lại test tự động.
 - [ ] Boss xác nhận đạt.

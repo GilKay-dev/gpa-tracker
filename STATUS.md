@@ -9,10 +9,10 @@ _Cập nhật lần cuối: 2026-10-07_
 | 1. Yêu cầu (PRD) | ✅ Hoàn thành |
 | 2. Thiết kế luồng (Mermaid) | ✅ Hoàn thành (Boss duyệt 2026-10-07) |
 | 3. Cài đặt + kiểm thử tự động | ✅ Hoàn thành (F1–F5, 119 test đạt, build thành công, giao diện đã kiểm tra ở 360px) |
-| 4. Kiểm thử người dùng (Boss) | ⬜ Chưa bắt đầu |
+| 4. Kiểm thử người dùng (Boss) | ⏳ Đang làm (checklist đã có: `docs/UAT.md`) |
 | 5. Deploy Vercel | ⬜ Chưa bắt đầu |
 
-**Việc tiếp theo:** Giai đoạn 4 — tôi chuẩn bị checklist kiểm thử, Boss chạy thử trên máy tính và điện thoại.
+**Việc tiếp theo:** Boss chạy thử theo `docs/UAT.md` trên máy tính và điện thoại, báo lỗi để tôi sửa.
 
 **URL công khai:** _(chưa có)_
 
